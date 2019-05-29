@@ -2,7 +2,6 @@ body {
     background-color: #ea5045;
     font-family: helvetica;
 }
-
 #bottomNav {
     background-color: dimgrey;
     width: 100%;
@@ -139,10 +138,16 @@ input {
 
 }
 
+.pinTabsClass{
+    width: 20;
+    height: 10px;
+
+}
+
 #newsFeed {
     grid-area: newsFeed;
-
-    background-color: aqua;
+    color: black;
+    background-color: white;
     height: 1500px;
     display: grid;
     grid-template: 1fr 1fr 1fr;
