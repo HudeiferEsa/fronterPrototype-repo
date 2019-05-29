@@ -1,0 +1,209 @@
+body {
+    background-color: #ea5045;
+    font-family: helvetica;
+}
+
+#bottomNav {
+    background-color: dimgrey;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#topNav {
+    background-color: dimgrey;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-bottom: 10px;
+}
+
+/*Log in page below*/
+#loginContainer {
+    display: grid;
+    grid-template-columns: 2em 1fr 1fr 1fr 2em;
+    grid-template-areas:
+        ". logo logo loginDiv .";
+}
+
+#logo {
+    grid-area: logo;
+    background-color: #ea5045;
+    /*    border: solid 3px black;*/
+    margin: auto;
+}
+
+#logoImg {
+    align-self: center;
+    width: 600px;
+    margin: auto;
+}
+
+#loginDiv {
+    grid-area: loginDiv;
+    background-color: #ea5045;
+    display: block;
+    text-align: center;
+}
+
+section {
+    perspective: 100%;
+    perspective-origin: top;
+}
+
+#btnOpen {
+    align-self: center;
+    position: fixed;
+}
+
+#loginForm {
+    color: black;
+    width: 300px;
+    border: solid 1px white;
+    margin: auto;
+    margin-top: 2em;
+    padding: 1em 3em;
+    background-color: #ea5045;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-left: 10px;
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-family: sans-serif;
+
+}
+
+input {
+    margin-left: 10px;
+    align-self: center;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+#btnSend {
+    align-self: center;
+    margin: 5px;
+    margin-left: 10px;
+    width: 190px;
+    height: 30px;
+}
+
+#loginForm.show {
+    animation: dropWink 2s forwards;
+    display: block;
+}
+
+@keyframes dropWink {
+
+    50% {
+        transform: rotateX(35deg);
+    }
+
+    75% {
+        transform: rotate(7deg)
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/*homepage below */
+#home-pageContainer {
+    display: grid;
+    grid-template-columns: 1.5em 1fr 1fr 1fr 1.5em;
+    grid-template-areas: ". . pinSection . ."
+        ". newsFeed newsFeed newsFeed .";
+    grid-column-gap: 10px;
+    margin-top: 20px;
+}
+
+#pinSection {
+    grid-area: pinSection;
+    background-color: aqua;
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+
+}
+
+#newsFeed {
+    grid-area: newsFeed;
+
+    background-color: aqua;
+    height: 1500px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr;
+    grid-template-areas: "articleTxt articleTxt articleImg";
+    margin: 10px;
+}
+
+#articleTxt {
+    grid-area: articleTxt;
+    height: 10px;
+    width: 100%;
+    background-color: brown;
+}
+
+#articleImg {
+    grid-area: articleImg;
+    height: 10px;
+    width: 100%;
+    background-color: gray;
+}
+
+/*articlePage below */
+
+
+
+
+/*MEDIA QUERY MOBILE VERSION below */
+@media screen and (max-width: 415px) {
+    body {
+        background-color: #ea5045;
+    }
+
+    /*Log in page below*/
+    #loginContainer {
+        display: grid;
+        grid-template-columns: 0.5em 1fr 0.5em;
+        grid-template-areas:
+            ". logo ."
+            ". loginDiv .";
+        align-items: center;
+    }
+
+    #logo {
+        grid-area: logo;
+        background-color: #ea5045;
+        height: px;
+    }
+
+    #loginDiv {
+        grid-area: loginDiv;
+        background-color: #ea5045;
+        display: block;
+        text-align: center;
+    }
+
+    #logoImg {
+        align-self: center;
+        width: 200px;
+    }
+
+    #btnOpen {
+    align-self: center;
+    position: fixed;
+}
+}
