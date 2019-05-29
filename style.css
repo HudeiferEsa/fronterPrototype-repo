@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: white;
     font-family: helvetica;
@@ -18,23 +23,35 @@ body {
 #bottomNav img{
     width: 50px;
     margin-top: 5px;
-
 }
-
+#settings-icon{
+    grid-area: settings;
+}
+#chat-icon{
+    grid-area: chat;
+}
 #topNav {
     background-color: dimgrey;
     width: 100%;
-    height: 20px;
+    height: auto;
     overflow: hidden;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "settings . . chat";
+    justify-items: center;
+}
+#topNav img{
+    width: 50px;
+    margin-top: 5px;
 }
 
 /*Log in page below*/
 #loginBody{
-    background-color: ea5045;
+    background-color: #ea5045;
 }
 #loginContainer {
     display: grid;
@@ -141,13 +158,11 @@ input {
     grid-column-gap: 10px;
     margin-top: 20px;
 }
-
 #pinSection {
     grid-area: pinSection;
     background-color: white;
     width: auto;
     height: auto;
-    margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3px;
@@ -156,10 +171,14 @@ input {
 }
 
 
+
 .pinTabsClass{
     background-color: #ea5045;
-    width: 100px;
-    height: 50px;
+    width: 160px;
+    height: 120px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
 #newsFeed {
@@ -167,10 +186,22 @@ input {
     color: black;
     background-color: white;
     height: 1500px;
+/*    display: grid;*/
+/*    grid-template: 1fr 1fr 1fr;
+    grid-template-areas: "articleTxt articleTxt articleImg";*/
+    margin: 10px;
+}
+#newsFeed h1{
+    text-align: center;
+}
+.newsRows{
     display: grid;
     grid-template: 1fr 1fr 1fr;
     grid-template-areas: "articleTxt articleTxt articleImg";
-    margin: 10px;
+    margin-bottom: 2vw;
+}
+#newsSectionTitle{
+    font-size: 20px;
 }
 
 #articleTxt {
@@ -188,9 +219,6 @@ input {
 }
 
 /*articlePage below */
-
-
-
 
 /*MEDIA QUERY MOBILE VERSION below */
 @media screen and (max-width: 415px) {
