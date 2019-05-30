@@ -9,7 +9,7 @@ body {
 }
 
 #bottomNav {
-    background-color: dimgrey;
+    background-color: black;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -39,7 +39,7 @@ body {
 }
 
 #topNav {
-    background-color: dimgrey;
+    background-color: black;
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -185,6 +185,7 @@ input {
     grid-gap: 3px;
     align-items: center;
     justify-items: center;
+    margin-bottom: 20px;
 }
 
 .pinTabsClass {
@@ -216,8 +217,8 @@ input {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "articleTxt articleImg";
-    margin-bottom: 2vw;
-    /*    width: 100%;*/
+    margin-bottom: 4vw;
+    border: solid 1px;
 }
 
 #newsSectionTitle {
@@ -228,12 +229,8 @@ input {
     grid-area: articleTxt;
     /*    height: 100px;
     width: 100%;*/
-    background-color: brown;
-
+    background-color: #ffffff;
 }
-
-
-
 .articleImg {
     grid-area: articleImg;
     height: 100px;
@@ -246,9 +243,34 @@ input {
         object-fit: cover;
         width: 100%;
     }
-
+#anchor:visited{
+    color: black;
+}
 
 /*articlePage below */
+#articleSection{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: ". articleImage ."
+        ". articleHeader ."
+        ". articleArticle .";
+        border: solid 2px;
+}
+
+#articlePageImg{
+    grid-area: articleImage;
+}
+#articlePageHeaderTxt{
+    grid-area: articleHeader;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+}
+#articlePageContentTxt{
+    grid-area: articleArticle;
+    font-size: 16px
+}
+
 
 /*MEDIA QUERY MOBILE VERSION below */
 @media screen and (max-width: 415px) {
@@ -314,7 +336,7 @@ input {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: "articleImg""articleTxt";
-        margin-bottom: 2vw;
+        margin-bottom: 4vw;
         width: 100%;
     }
 
@@ -326,7 +348,7 @@ input {
         grid-area: articleTxt;
         height: 100px;
         width: 100%;
-        background-color: brown;
+        background-color: white;
 
     }
 
@@ -337,6 +359,27 @@ input {
         height: 100%;
         object-fit: cover;
     }
+    /*articlePage below */
+#articleSection{
+    display: grid;
+    grid-template-columns: 1em 2fr 1em;
+    grid-template-areas: ". articleImage ."
+        ". articleHeader ."
+        ". articleArticle .";
+}
+#articlePageImg{
+    grid-area: articleImage;
+}
+#articlePageHeaderTxt{
+    grid-area: articleHeader;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+}
+#articlePageContentTxt{
+    grid-area: articleArticle;
+    font-size: 12px;
+}
 
 /*    #articleImg1 {
         background-image: url(assets/Large/pexels-photo-274192.jpeg);
