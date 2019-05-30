@@ -21,6 +21,9 @@ body {
     justify-items: center;
     align-items: center;
 }
+.bottomNav:hover{
+    background: #ea5045;
+}
 
 #bottomNav img {
     width: 50px;
@@ -238,13 +241,14 @@ input {
     background-color: gray;
 }
 
-/*articlePage below */
-
-.test {
+.testImg {
         height: 100%;
         object-fit: cover;
         width: 100%;
     }
+
+
+/*articlePage below */
 
 /*MEDIA QUERY MOBILE VERSION below */
 @media screen and (max-width: 415px) {
