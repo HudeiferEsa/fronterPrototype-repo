@@ -1,5 +1,5 @@
-        btnBegin.addEventListener("click", openForm);
+        btnBegin.addEventListener("click", dropWink);
 
-        function openForm() {
+        function dropWink() {
             loginForm.classList.toggle("show");
         }
